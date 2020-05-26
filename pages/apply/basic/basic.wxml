@@ -1,0 +1,110 @@
+<view class="contain">
+	<view class="content">
+		<view class="title">基本信息</view>
+		<view class="form">
+
+			<van-cell-group>
+			<!-- disabled="{{isModify}}"  -->
+				<van-field value="{{ username }}" label="姓名" placeholder="请输入姓名" bind:input="inputName" required  />
+				<van-field value="{{ oldname }}" label="曾用名" placeholder="如果没有填无" bind:input="inputOldName" required maxlength='10' />
+				<van-field value="{{ idCard }}" type="idcard" label="身份证" maxlength='18' placeholder="请输入身份证号" bind:input="inputIdCard" bind:blur="inputIdCardBlur" required error="{{errorColor}}" error-message="{{errorMessageIdcard}}"  />
+				<van-field value="{{ phone }}" type="number" label="手机号" maxlength='11' placeholder="请输入手机号" bind:input="inputPhone" bind:blur="inputPhoneBlur" required error="{{errorColor}}" error-message="{{errorMessage}}" />
+
+				<view class="v-radio">
+					<view class="label">性别身高</view>
+					<van-radio-group value="{{ sex }}" class="horizontal" bind:change="onRadioChange">
+						<van-radio name="1">男</van-radio>
+						<van-radio name="0">女</van-radio>
+					</van-radio-group>
+					<view style="margin-left:70rpx;margin-right:40rpx;display:flex;align-item:center;justify-content: center;">
+						<input value="{{height}}" placeholder="请输入身高" bind:input="inputHeight" maxlength="3"></input>
+						<text>cm</text>
+					</view>
+				</view>
+
+				<van-field value="{{nation }}" label="民族" placeholder="请选择所属民族" disabled required use-button-slot>
+					<van-button class="noborder" slot="button" size="small" type="primary" bind:click="choiceNation">选择</van-button>
+				</van-field>
+
+				<van-field value="{{birth }}" label="出生日期" placeholder="请选择出生日期" disabled required use-button-slot>
+					<van-button class="noborder" slot="button" size="small" type="primary" bind:click="choiceBirth">选择</van-button>
+				</van-field>
+
+				<van-field value="{{household }}" label="户籍地省市区" placeholder="请选择户籍地省市区" disabled required use-button-slot>
+					<van-button class="noborder" slot="button" size="small" type="primary" bind:click="choiceHousehold">选择</van-button>
+				</van-field>
+				<van-field value="{{householdNum}}" label="现住址所在地" placeholder="请选择现住址所在地" disabled required use-button-slot>
+					<van-button class="noborder" slot="button" size="small" type="primary" bind:click="choiceHouseholdNum">选择</van-button>
+				</van-field>
+				<van-field value="{{education}}" label="文化程度" placeholder="请选择文化程度" disabled required use-button-slot>
+					<van-button class="noborder" slot="button" size="small" type="primary" bind:click="choiceEducation">选择</van-button>
+				</van-field>
+				<van-field value="{{political}}" label="政治面貌" placeholder="请选择政治面貌" disabled required use-button-slot required>
+					<van-button class="noborder" slot="button" size="small" type="primary" bind:click="choicePolitical">选择</van-button>
+				</van-field>
+
+
+
+				<van-field value="{{ blood }}" label="血型" placeholder="请选择血型" disabled use-button-slot >
+					<van-button class="noborder" slot="button" size="small" type="primary" bind:click="choiceBlood">选择</van-button>
+				</van-field>
+				<van-field value="{{ marriage }}" label="婚姻状况" placeholder="请选择婚姻状况" disabled use-button-slot required>
+					<van-button class="noborder" slot="button" size="small" type="primary" bind:click="choiceMarriage">选择</van-button>
+				</van-field>
+				<van-field value="{{ faith }}" label="宗教信仰" placeholder="请选择宗教信仰" disabled use-button-slot required>
+					<van-button class="noborder" slot="button" size="small" type="primary" bind:click="choiceFaith">选择</van-button>
+				</van-field>
+				<van-field value="{{ military }}" label="兵役状况" placeholder="请选择兵役状况" disabled use-button-slot required>
+					<van-button class="noborder" slot="button" size="small" type="primary" bind:click="choiceMilitary">选择</van-button>
+				</van-field>
+
+				<van-field value="{{ isRegister }}" label="是否到派出所登记过流动人口信息" placeholder="请选择" disabled use-button-slot required>
+					<van-button class="noborder" slot="button" size="small" type="primary" bind:click="choiceRegister">选择</van-button>
+				</van-field>
+
+
+				<van-field value="{{ police }}" label="所属派出所" placeholder="请选择" disabled use-button-slot required>
+					<van-button class="noborder" slot="button" size="small" type="primary" bind:click="choicePolice">选择</van-button>
+				</van-field>
+
+
+				<van-field value="{{ work }}" label="人员身份" placeholder="请选择" disabled use-button-slot required>
+					<van-button class="noborder" slot="button" size="small" type="primary" bind:click="choiceWork">选择</van-button>
+				</van-field>
+				<van-field value="{{ use }}" label="居住事由" placeholder="请选择" disabled use-button-slot required>
+					<van-button class="noborder" slot="button" size="small" type="primary" bind:click="choiceUse">选择</van-button>
+				</van-field>
+
+
+				<van-field value="{{ mailBox }}" label="电子邮箱" placeholder="请输入电子邮箱" bind:input="inputMailBox" />
+				<van-field value="{{ urgentName }}" label="紧急联系人" placeholder="请输入紧急联系人" bind:input="inputUrgentName" />
+				<van-field value="{{ urgentPhone }}" type="number" maxlength='11' label="紧急联系电话" placeholder="请输入紧急联系人电话" bind:input="inputUrgentPhone" />
+			</van-cell-group>
+
+
+
+		</view>
+
+		<!-- 底部弹框 -->
+		<van-popup show="{{ pickerShow }}" position="bottom">
+			<block wx:if="{{isDatePicker}}">
+				<van-datetime-picker type="date" title="{{pickerTitle}}" bind:cancel="onDatePickerCancel" bind:confirm="onDatePickerConfirm" value="{{ currentDate }}" bind:input="onDatePickeInput" max-date="{{maxDate}}" min-date="{{ minDate }}" formatter="{{ formatter }}" />
+			</block>
+
+			<block wx:elif="{{isAddresssPicker}}">
+				<van-area area-list="{{ areaList }}" title="{{pickerTitle}}"  bind:cancel="onPickerCancel" bind:confirm="onPickerConfirm" />
+			</block>
+
+			<block wx:else>
+				<van-picker show-toolbar title="{{pickerTitle}}" columns="{{ pickerColumns }}" bind:cancel="onPickerCancel" bind:confirm="onPickerConfirm" bind:change="onPickerChange" />
+			</block>
+		</van-popup>
+
+
+	</view>
+	<view class="next">
+		<van-button type="primary" size="small" bindtap="gotonext" class="btn-pad">下一步</van-button>
+	</view>
+
+</view>
+<i-toast id="toast" />

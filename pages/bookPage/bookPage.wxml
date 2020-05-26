@@ -1,0 +1,42 @@
+<view class="contain">
+	<view class="content">
+		<view class="title">居住地址、就业或者就读等证明材料</view>
+		<view class="form">
+
+			<van-grid column-num="4" border="{{ false }}" >
+				<van-grid-item use-slot wx:for="{{ tmpArray }}" data-index="{{index}}" bind:click="chooseLoadImg" >
+					<view class="img-show">
+						<image class="img"  mode="aspectFit" src="{{item ? item : '/common/img/camera.png'}}" />
+					</view>
+				</van-grid-item> 
+				<van-button  class="btn-pad" type="primary"  bindtap="addMoreArray" >添加更多</van-button>
+			</van-grid>
+
+
+
+
+			<view class="display-column">
+				<!-- <van-image class="upLoad" use-loading-slot width="220rpx" height="220rpx" fit="contain" src="/common/img/photo.png" bind:click="chooseLoadImg">
+					<van-loading slot="loading" type="spinner" size="10" vertical />
+				</van-image> -->
+				<view class="c2">
+					<text class="txt">注：手机竖直拍照，A4纸张大小可见，多页可多张拍摄。照片字体清晰可见，方便审核。字体不清晰或虚假证明等，审核予以驳回。</text>
+					<van-button class="upload-btn" type="primary" bind:click="upLoadImg" color='#00CCFF' size="normal">开始上传</van-button>
+				</view>
+
+			</view>
+
+			<!-- <view style="line-height:24px;padding:10px 16px;font-size:24rpx;text-align: center;color: #5cadff;">居民证办理须知</view>
+			<van-checkbox value="{{ isread }}" shape="square" bind:change="onIsreadChange" class="v-checkbox">
+				我已经阅读居住办理须知，并保证以上申报内容真确属实
+			</van-checkbox> -->
+		</view>
+	</view>
+
+
+	<view class="next">
+		<van-button  type="primary" bindtap="gotonext" class="btn-pad">下一步</van-button>
+	</view>
+
+</view>
+<i-toast id="toast" />

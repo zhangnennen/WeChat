@@ -1,0 +1,24 @@
+<!--pages/first/first.wxml-->
+
+<!-- <van-button type="default">默认按钮</van-button> -->
+<view>
+  <view class="">
+    <label>订单编号</label>
+    <input type="text" value="{{character_string1}}" bindinput="inptCode" bindblur="inpBlurCode" style="border:1rpx solid {{isString1?'#eee':'red'}}" placeholder="请输入编号"></input>
+  </view>
+ <view>
+    <label>商品名称</label>
+    <input type="text" value="{{thing2}}"  bindinput="inptName" maxlength="18" placeholder="请输入商品名称" wx:if="{{thing2 == ''}}"></input>
+  </view>
+   <view>
+    <label>快递单号</label>
+    <input type="text" value="{{character_string4}}"  bindinput="inptPostCode" placeholder="请输入快递单号"></input>
+  </view>
+   <view>
+    <label>快递公司</label>
+    <input type="text" value="{{thing3}}"  bindinput="inptPostC" placeholder="请输入快递公司"></input>
+  </view>
+  
+  <button bindtap="getmsg">发送消息</button>
+
+</view>

@@ -1,0 +1,17 @@
+{
+  "usingComponents": {
+    "van-button": "/common/module/weapp/dist/button/index",
+    "van-field": "/common/module/weapp/dist/field/index",
+    "van-picker": "/common/module/weapp/dist/picker/index",
+    "van-datetime-picker": "/common/module/weapp/dist/datetime-picker/index",
+    "van-popup": "/common/module/weapp/dist/popup/index",
+    "van-icon": "/common/module/weapp/dist/icon/index",
+
+    "van-checkbox-group": "/common/module/weapp/dist/checkbox-group/index"
+  },
+  "navigationBarBackgroundColor": "#eee",
+  "navigationBarTitleText": "完善居住信息",
+  "backgroundColor": "#eee",
+  "backgroundTextStyle": "light",
+  "navigationBarTextStyle": "black"
+}

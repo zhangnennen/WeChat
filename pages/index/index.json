@@ -1,0 +1,18 @@
+{
+  "usingComponents": {
+    "van-button": "/common/module/weapp/dist/button/index",
+    "van-checkbox": "/common/module/weapp/dist/checkbox/index",
+    "van-dialog": "/common/module/weapp/dist/dialog/index",
+    "van-radio": "/common/module/weapp/dist/radio/index",
+    "van-radio-group": "/common/module/weapp/dist/radio-group/index",
+    "i-modal": "/common/iview/dist/modal/index",
+    "i-icon": "/common/iview/dist/icon/index",
+    "i-radio-group": "/common/iview/dist/radio-group/index",
+    "i-radio": "/common/iview/dist/radio/index"
+  },
+  "navigationBarBackgroundColor": "#eee",
+  "navigationBarTitleText": "居住证线上办理",
+  "backgroundColor": "#eee",
+  "backgroundTextStyle": "light",
+  "navigationBarTextStyle": "black"
+}

@@ -1,0 +1,73 @@
+<view class="contain">
+	<view class="content">
+		<view class="title">居住信息</view>
+		<view class="form">
+
+			<van-cell-group>
+
+				<van-field value="{{ liveDate }}" label="来本地日期" placeholder="请选择日期" disabled required use-button-slot>
+					<van-button class="noborder" slot="button" size="small" type="primary" bind:click="choiceLiveDate">选择</van-button>
+				</van-field>
+				<!-- <van-field value="{{ liveReason }}" label="居住事由" placeholder="如果没有填无" bind:input="inputLiveReason" required /> -->
+
+				<van-field value="{{  liveType }}" label="居住方式" placeholder="请选择居住方式" disabled required use-button-slot>
+					<van-button class="noborder" slot="button" size="small" type="primary" bind:click="choiceLiveType">选择</van-button>
+				</van-field>
+
+				<van-field value="{{ liveHouseType }}" label="住所类型" placeholder="请选择住所类型" disabled required use-button-slot>
+					<van-button class="noborder" slot="button" size="small" type="primary" bind:click="choiceLiveHouseType">选择</van-button>
+				</van-field>
+
+				<van-field required value="{{ liveAddress }}" label="居住详细地址" placeholder="请输入详细地址" bind:input="inputLiveAddress" />
+			</van-cell-group>
+
+
+			<view class="v-cent" hidden="{{isAdd}}">
+				<view class="v-cent-label">
+					<view class="label">共同居住者</view>
+					<view class="addPel">
+						<van-icon bind:click="addPeople" name="plus" />
+					</view>
+				</view>
+
+				<view class="v-cent-pels" wx:for="{{ liveArray}}">
+					<van-icon bind:click="delPeople" data-index="{{index}}" name="cross" />
+					<van-field value="{{ item.shipname }}" required data-index="{{index}}" placeholder="请输入姓名" bind:input="inputToName" />
+
+					<van-field value="{{ item.shipidcard }}" type="idcard" data-index="{{index}}" label="身份证" maxlength='18' placeholder="请输入身份证号" bind:input="inputIdCard" bind:blur="inputIdCardBlur" required error="{{errorColor}}" error-message="{{errorMessageIdcard}}" />
+
+					<van-field value="{{ item.shipphone }}" type="number" data-index="{{index}}" label="电话" maxlength='11' placeholder="请输入手机号" bind:input="inputToPhone" bind:blur="inputPhoneBlur" required error="{{errorColor}}" error-message="{{errorMessage}}" />
+
+
+					<van-field value="{{ item.shiprelation }}" data-index="{{index}}" label="与本人关系" placeholder="请选择" border="{{ false }}" disabled use-button-slot required>
+						<van-button class="noborder" slot="button" data-index="{{index}}" size="small" type="primary" bind:click="choiceToRelationShipType">选择</van-button>
+					</van-field>
+				</view>
+
+
+
+			</view>
+
+
+
+
+		</view>
+
+		<!-- 底部弹框 -->
+		<van-popup show="{{ pickerShow }}" position="bottom">
+			<block wx:if="{{!isDatePicker}}">
+				<van-picker show-toolbar title="{{pickerTitle}}" columns="{{ pickerColumns }}" bind:cancel="onPickerCancel" bind:confirm="onPickerConfirm" bind:change="onPickerChange" />
+			</block>
+			<block wx:else="{{isDatePicker}}">
+				<van-datetime-picker type="date" title="{{pickerTitle}}" bind:cancel="onDatePickerCancel" bind:confirm="onDatePickerConfirm" value="{{ currentDate }}" bind:input="onDatePickeInput" max-date="{{maxDate}}" min-date="{{ minDate }}" formatter="{{ formatter }}" />
+			</block>
+		</van-popup>
+
+
+	</view>
+	<view class="next">
+		<van-button type="primary" bindtap="gotonext" class="btn-pad">下一步</van-button>
+	</view>
+
+</view>
+<i-toast id="toast" />

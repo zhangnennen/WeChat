@@ -1,0 +1,85 @@
+
+@import "../../../common/css/main.wxss";
+
+page{
+  height: 100%;
+}
+.contain{
+  height: 100%;
+  display:flex;
+  flex-direction:column;
+  padding:10rpx 20rpx;
+}
+
+.content .title{
+  border-bottom: 4rpx #aaa solid;
+  text-align: center;
+  font-size: 60rpx;
+  padding: 10rpx 0;
+}
+
+.v-cent {
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.v-cent .v-cent-label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.v-cent .v-cent-pels{
+  padding: 10px 16px;
+}
+.v-cent .v-cent-label .label {
+  position: relative;
+  max-width: 90px;
+  min-width: 65px;
+  padding: 10px 16px;
+}
+
+/* .v-cent .v-cent-label .label::before {
+  position: absolute;
+  content: "*";
+  left: 8px;
+  font-size: 14px;
+  color: #ee0a24;
+} */
+.v-cent::after {
+  position: absolute;
+  box-sizing: border-box;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  content: " ";
+  pointer-events: none;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 16px;
+  border-bottom: 1px solid #ebedf0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+
+.v-checkbox .van-checkbox,.v-checkbox .van-checkbox__icon{
+  font-size: 12px !important;
+}
+
+
+
+.next{
+  text-align: center;
+  padding: 20rpx  0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-pad .van-button--primary {
+  padding: 0 120rpx; 
+  background-color: #008CBA;
+  font-size: 16px;
+  border-radius: 8px;
+}

@@ -1,0 +1,76 @@
+.van-button--primary {
+  border: 1rpx solid #eee !important;
+  border-radius: 10rpx !important;
+}
+
+.btn-bc-blue .van-button--primary {
+  background-color: #1989fa;
+  color: white;
+}
+
+/* vant 表单中处理 checkbox 和 radio */
+.horizontal {
+  display: flex;
+  align-items: center;
+}
+
+.horizontal .van-checkbox {
+  display: flex;
+  margin-left: 10px;
+}
+
+.horizontal .van-radio {
+  display: flex;
+  margin-left: 10px;
+}
+
+.v-radio {
+  font-size: 28rpx;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.v-radio .label {
+  position: relative;
+  max-width: 90px;
+  min-width: 65px;
+  padding: 10px 16px;
+}
+.v-radio .label::before {
+  position: absolute;
+  content: "*";
+  left: 8px;
+  font-size: 14px;
+  color: #ee0a24;
+}
+.v-radio::after {
+  position: absolute;
+  box-sizing: border-box;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  content: " ";
+  pointer-events: none;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 16px;
+  border-bottom: 1px solid #ebedf0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.noborder .van-button__text {
+  border: none;
+  background-color: transparent;
+  color: #3a78db;
+}
+.noborder .van-button--primary {
+  border: none !important;
+  background-color: transparent;
+}
+.noborder .van-button--primary:hover {
+  border: none !important;
+  background-color: transparent;
+}
+
+/* vant 表单中处理 checkbox 和 radio */

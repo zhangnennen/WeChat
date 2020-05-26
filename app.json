@@ -1,0 +1,35 @@
+{
+  "pages": [
+
+
+    "pages/index/index",
+    "pages/apply/live/live",
+    "pages/apply/apply",
+    "pages/mycard/mycard",
+    "pages/first/first",
+    "pages/bookPage/bookPage",
+    "pages/apply/basic/basic",
+    "pages/face/face",
+    "pages/result/result",
+    "pages/webPage/web",
+    "pages/xuzhi/xuzhi"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "i-toast": "/common/iview/dist/toast/index",
+    "van-loading": "/common/module/weapp/dist/loading/index",
+    "i-modal": "/common/iview/dist/modal/index"
+  }
+}
+

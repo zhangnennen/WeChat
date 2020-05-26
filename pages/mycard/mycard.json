@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-button": "/common/module/weapp/dist/button/index",
+    "van-cell": "/common/module/weapp/dist/cell/index",
+    "van-cell-group": "/common/module/weapp/dist/cell-group/index"
+  },
+    "navigationBarBackgroundColor": "#eee",
+    "navigationBarTitleText": "我的居住证",
+    "backgroundColor": "#eee",
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "black"
+}

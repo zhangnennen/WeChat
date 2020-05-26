@@ -1,0 +1,17 @@
+<!--pages/face/face.wxml-->
+
+<!-- <view class="zm-view">
+ 
+	<view class="lopp">
+
+		<camera device-position="front" flash="off" binderror="error" class="camera">
+		</camera>
+		<view class="ball"> </view>
+
+	</view>
+
+	<view class="btn-view">
+		<van-button type="primary" bindtap="startAuth" class="btn-pad">点击认证</van-button>
+	</view>
+</view> -->
+<i-toast id="toast" />

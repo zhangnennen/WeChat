@@ -1,0 +1,182 @@
+<!--pages/mycard/mycard.wxml-->
+
+<view wx:if="{{status == 6}}">
+
+	<view class="idcard ">
+		<image class="zm-img1" mode="heightFix" src="/common/img/img1.png"> </image>
+
+		<view class="idcard-front">
+			<view class="idcard-row idcard-name">{{name}}</view>
+			<view class="idcard-row idcard-row2"><text>{{sex}}</text><text style="margin-left:24%;">{{nation}}</text></view>
+			<view class="idcard-row idcard-row3"><text>{{birthArray[0]}}</text><text style="margin-left:11%;">{{birthArray[1]}}</text><text style="margin-left:10%;">{{birthArray[2]}}</text></view>
+			<view class="idcard-row idcard-row4">{{idCard}}</view>
+			<view class="idcard-row idcard-row5">{{address}}</view>
+
+			<view class="idcard-row idcard-row6">{{householdNum}}</view>
+			<view class="idcard-row idcard-row7"><text style="width:40rpx;overflow:hidden;word-wrap: break-word;word-break: break-all;white-space: pre-line;">{{authTimeStr}} 到 {{endauthTimeStr}}</text><text style="margin-left:-23%;">乌兰察布市公安局</text></view>
+
+			<view class="cardTx">
+					<image mode="aspectFit" src="{{photoFront}}"></image>
+				</view>
+		</view>
+
+	</view>
+
+	<view class="idcard ">
+		<image class="zm-img2" mode="heightFix" src="/common/img/img2.png"> </image>
+
+		<view class="idcard-back">
+
+		</view>
+	</view>
+
+	<view class="buttom">
+		<view class="buttom-c-up">
+			<view>
+				<view class="bottom-li">证件申领/补领地址：
+					<!-- <van-button round type="primary" size="mini" bind:click="openTgLocation" class="">点击导航</van-button> -->
+				</view>
+				<view>乌兰察布市{{policeStation}}</view>
+				<!-- <view>距离我约：{{meters}}km</view>
+				<view bindtap='callGetPhone' data-getPhone='{{callGetPhone}}'><text style="color:blue;">{{callGetPhone}}</text> </view> -->
+			</view>
+			<view class="card11">
+				<!-- <image class="code" src="../../common/img/default.png"></image>
+				<view style="color:#aaa;font-size:24rpx;">证件已经领取</view> -->
+			</view>
+		</view>
+		<view class="msg">注：居住证的签证/变更/换领/补领，到上方地址办理。</view>
+	</view>
+
+</view>
+
+<view wx:if="{{status == 5}}" class="content">
+	<view class="title">{{title}}</view>
+
+	<view class="page-form">
+
+
+		<view class="form">
+			<view a:if="{{true}}" class="ui-subscript {{status == 5 ? 'ui-subscript-red' : 'ui-subscript-orange'}}">{{statusStr}}</view>
+
+			<van-cell-group style="width:100%; margin-top:200rpx">
+				<van-cell title="申请人" value="{{name}}" />
+				<van-cell title="申请人电话" value="{{phone}}" />
+				<van-cell title="申请人住址" value="{{householdNum}}{{liveAddress}}" />
+				<van-cell title="驳回理由" value="{{reason}}" />
+			</van-cell-group>
+
+		</view>
+
+	</view>
+
+</view>
+
+<view wx:if="{{status == 4 || status == 3}}" class="content">
+	<view class="title">{{title}}</view>
+
+	<view class="page-form">
+
+
+		<view class="form" style="back">
+			<view a:if="{{true}}" class="ui-subscript {{status == 4 ? 'ui-subscript-orange' : 'ui-subscript-orange'}}">正在审核！</view>
+			<van-cell-group style="width:100%; margin-top:200rpx">
+				<van-cell title="申请人" value="{{name}}" />
+				<van-cell title="申请人电话" value="{{phone}}" />
+				<van-cell title="申请人住址" value="{{householdNum}}" />
+			</van-cell-group>
+
+		</view>
+
+	</view>
+
+</view>
+
+
+<view wx:if="{{status == 7}}" class="content">
+	<view class="title">{{title}}</view>
+
+	<view class="page-form">
+
+
+		<view class="form" style="back">
+			<view a:if="{{true}}" class="ui-subscript {{status == 7 ? 'ui-subscript-red' : 'ui-subscript-orange'}}">账户已注销！</view>
+			<van-cell-group style="width:100%; margin-top:200rpx">
+				<van-cell title="申请人" value="{{name}}" />
+				<van-cell title="申请人电话" value="{{phone}}" />
+				<van-cell title="申请人住址" value="{{householdNum}}" />
+			</van-cell-group>
+
+		</view>
+
+	</view>
+
+</view>
+
+
+
+<view wx:if="{{status == 0 }}" class="content">
+	<view class="title">{{title}}</view>
+
+	<view class="page-form">
+
+
+		<view class="form">
+			<view a:if="{{true}}" class="ui-subscript {{status == 5 ? 'ui-subscript-red' : 'ui-subscript-orange'}}">请点击申请居民证</view>
+
+			<van-cell-group style="width:100%; margin-top:200rpx">
+				<van-cell title="申请人" value="{{name}}" />
+				<van-cell title="申请人电话" value="{{phone}}" />
+				<van-cell title="申请人住址" value="{{address}}" />
+			</van-cell-group>
+
+		</view>
+
+	</view>
+
+</view>
+
+
+
+<view wx:if="{{status == 1 }}" class="content">
+	<view class="title">{{title}}</view>
+
+	<view class="page-form">
+
+
+		<view class="form">
+			<view a:if="{{true}}" class="ui-subscript {{status == 5 ? 'ui-subscript-red' : 'ui-subscript-orange'}}">请完善基本信息</view>
+
+			<van-cell-group style="width:100%; margin-top:200rpx">
+				<van-cell title="申请人" value="{{name}}" />
+				<van-cell title="申请人电话" value="{{phone}}" />
+				<van-cell title="申请人住址" value="{{address}}" />
+			</van-cell-group>
+
+		</view>
+
+	</view>
+</view>
+
+<view wx:if="{{status == 2 }}" class="content">
+	<view class="title">{{title}}</view>
+
+	<view class="page-form">
+
+
+		<view class="form">
+			<view a:if="{{true}}" class="ui-subscript {{status == 5 ? 'ui-subscript-red' : 'ui-subscript-orange'}}">请填写居住信息</view>
+
+			<van-cell-group style="width:100%; margin-top:200rpx">
+				<van-cell title="申请人" value="{{name}}" />
+				<van-cell title="申请人电话" value="{{phone}}" />
+				<van-cell title="申请人住址" value="{{address}}" />
+			</van-cell-group>
+
+		</view>
+
+	</view>
+
+</view>
+
+<i-toast id="toast" />

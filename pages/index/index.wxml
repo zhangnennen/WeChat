@@ -1,0 +1,76 @@
+<!--index.wxml-->
+
+
+
+<view class="container">
+	<image class="backgoundImage" src="/common/img/bg.png"></image>
+	<view class="bodyc">
+		<view class="usermotto" wx:if="{{isLogin == 1}}">
+			<block wx:if="{{isAuth}}">
+				<view>
+					<van-button disabled="{{isTap}}" class="mycard" type="primary" bind:click="gotoMycard">我的居住证</van-button>
+					<van-button disabled="{{isTap}}" class="applycard" type="primary" style="margin-top:20rpx;" bind:click="gotoApplycard">申请个人居住证</van-button>
+				</view>
+				<view style="margin-top:20rpx">
+
+					<van-button disabled="{{isTap}}" class="applycard" type="primary" style="margin-top:20rpx;" bind:click="gotoMyHelpcard">协助者居住证</van-button>
+					<van-button disabled="{{isTap}}" class="applycard" type="primary" style="margin-top:20rpx;" bind:click="gotoHelpApplycard">协助申请居住证</van-button>
+				</view>
+
+				<!-- <i-modal title="协助人与您的关系" visible="{{ show }}" actions="{{ shipArray }}" action-mode="{{ vertical }}" bind:click="handleClick">
+			</i-modal> -->
+				<i-modal title="协助人与您的关系" visible="{{ show }}" bind:ok="bindTapOk" bind:cancel="bindTapCancle">
+					<i-radio-group current="{{current}}" bindchange="handleClick">
+						<i-radio wx:for="{{shipArray}}" wx:key="{{item.replaceCode}}" value="{{item.name}}">
+						</i-radio>
+					</i-radio-group>
+				</i-modal>
+
+			</block>
+
+			<van-button wx:else class="applycard" type="primary" style="margin-top:20rpx;" open-type="getUserInfo" bind:getuserinfo="getUserInfo">点击授权</van-button>
+		</view>
+
+
+		<view class="usermotto" wx:else>
+			<view>
+				<van-button disabled="{{isTap}}" class="mycard" type="primary" bind:click="gotoMycard">我的居住证</van-button>
+				<van-button disabled="{{isTap}}" class="applycard" type="primary" style="margin-top:20rpx;" bind:click="gotoApplycard">申请个人居住证</van-button>
+			</view>
+
+
+			<view style="margin-top:20rpx">
+
+				<van-button disabled="{{isTap}}" class="applycard" type="primary" style="margin-top:20rpx;" bind:click="gotoMyHelpcard">协助者居住证</van-button>
+				<van-button disabled="{{isTap}}" class="applycard" type="primary" style="margin-top:20rpx;" bind:click="gotoHelpApplycard">协助申请居住证</van-button>
+			</view>
+
+
+
+			<!-- <i-modal title="协助人与您的关系" visible="{{ show }}" actions="{{ shipArray }}" action-mode="{{ vertical }}" bind:click="handleClick">
+
+		</i-modal> -->
+			<i-modal title="协助人与您的关系" visible="{{ show }}" bind:ok="bindTapOk" bind:cancel="bindTapCancle">
+				<i-radio-group current="{{current}}" bindchange="handleClick">
+					<i-radio wx:for="{{shipArray}}" wx:key="{{item.replaceCode}}" value="{{item.name}}">
+					</i-radio>
+				</i-radio-group>
+			</i-modal>
+
+		</view>
+
+		<view style="line-height:24px;padding:8rpx 16rpx;font-size:24rpx;text-align: center;color: #5cadff;" bindtap="gotoRead">居住证办理须知</view>
+		<view style="padding:20rpx 20rpx;">
+			<van-checkbox value="{{ isread }}" shape="square" bind:change="onIsreadChange" class="v-checkbox">
+				<text class="text">我已经阅读居住办理须知，并保证以上申报内容真确属实</text>
+			</van-checkbox>
+		</view>
+	</view>
+</view>
+<i-toast id="toast" />
+<van-dialog id="van-dialog" />
+<!-- <i-modal visible="{{ visible2 }}" bind:ok="handleClose2" bind:cancel="handleClose2">
+	<view>您有正在申请中的居住证，是否继续申请?</view>
+</i-modal> -->
+<!-- <i-icon type="noselect" size="28" color="red" custom="/common/img/no.png" />
+<i-icon type="select" size="28" custom="/common/img/select.png" /> -->

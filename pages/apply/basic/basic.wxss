@@ -1,0 +1,42 @@
+
+@import "../../../common/css/main.wxss";
+
+page{
+  height: 100%;
+}
+.contain{
+  height: 100%;
+  display:flex;
+  flex-direction:column;
+  padding:10rpx 20rpx;
+}
+.content{
+  
+}
+.content .title{
+  border-bottom: 4rpx #aaa solid;
+  text-align: center;
+  font-size: 60rpx;
+  padding: 10rpx 0;
+}
+
+
+
+
+.next{
+  margin-top: 30rpx;
+  text-align: center;
+  padding: 20rpx  0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30rpx;
+}
+
+.btn-pad .van-button--primary {
+
+    padding: 0 120rpx;
+    background-color: #008CBA;
+    font-size: 16px;
+    border-radius: 8px;
+  }

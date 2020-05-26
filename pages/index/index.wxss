@@ -1,0 +1,82 @@
+@import "/common/css/main.wxss";
+
+page{
+  height:100%;
+}
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+ 
+  box-sizing: border-box; 
+}  */
+.container{
+  width:100%;
+  height:100%;
+  /* position: relative; */
+  padding: 0;
+  margin: 0;
+/* 
+  display: table;
+width: 100%;
+display: table-cell ;
+margin: auto;
+vertical-align: middle ; */
+
+}
+.bodyc{
+  /* height: 100%; */
+  text-align: center;
+  position:absolute;
+  top: 66%;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+.backgoundImage{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  min-height: 100%;
+
+}
+
+.usermotto{
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 135%; */
+}
+.mycard .van-button--primary,.applycard .van-button--primary{
+  width: 280rpx;
+  background-color: #008CBA;
+  margin: 0rpx 10rpx;
+  font-size: 14px;
+  border-radius: 8px;
+  height: 38px;
+
+}
+
+.v-checkbox .van-checkbox,
+.v-checkbox .van-checkbox__icon {
+  font-size: 12px !important;
+
+}
+.text{
+  color: red;
+}
+
+.showModel{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.radioMargin{
+  margin-top: 20rpx;
+}

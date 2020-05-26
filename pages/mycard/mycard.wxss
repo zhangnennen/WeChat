@@ -1,0 +1,422 @@
+/* pages/mycard/mycard.wxss */
+
+page {
+  font-size: 28rpx;
+  color: #3f4142;
+  height: 100%;
+}
+
+.card-contain {
+  height: 70%;
+  padding: 20rpx 40rpx;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card {
+  border: 1rpx solid #eee;
+  background-color: #80c2ee;
+  border-radius: 20rpx;
+  padding: 30rpx 40rpx;
+}
+
+.card-back {
+  height: 450rpx;
+  border: 1rpx solid #eee;
+  background-color: #80c2ee;
+  border-radius: 20rpx;
+  padding: 35rpx 40rpx;
+}
+
+.card-f-up {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: top;
+}
+
+
+
+.card-text1 {
+  margin-top: 30rpx;
+  text-align: center;
+  font-size: 55rpx;
+  margin-bottom: 50rpx;
+}
+
+.card-text2 {
+  margin-bottom: 60rpx;
+  text-align: center;
+  font-size: 80rpx;
+
+}
+
+.card-text3 {
+  margin-top: 30rpx;
+  text-align: center;
+  font-size: 40rpx;
+
+}
+
+
+.idcard {
+  position: relative;
+  height: 550rpx;
+  width: 100%;
+}
+
+.idcard image {
+  z-index: -1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+
+
+  /* position: absolute; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  */
+}
+
+.idcard-front {
+  padding: 5% 8%;
+  position: relative;
+}
+
+.idcard-front .idcard-row {
+  margin-top: 3.5%;
+  margin-left: 27%;
+  font-size: 22rpx;
+}
+
+.idcard-front .idcard-row text {
+  font-size: 22rpx;
+}
+
+.idcard-front .idcard-name {
+  /* margin-top: 40rpx; */
+  margin-top: 6%;
+  margin-left: 27%;
+
+}
+
+.idcard-front .idcard-row2 {
+  margin-top: 4.5%;
+}
+
+.idcard-front .idcard-row3 {
+  margin-top: 3%;
+}
+
+.idcard-front .idcard-row4 {
+  margin-top: 2.5%;
+  margin-left: 36%;
+}
+
+.idcard-front .idcard-row5 {
+  margin-top: 2%;
+
+}
+
+.idcard-front .idcard-row6 {
+  margin-top: 12.5%;
+}
+
+.idcard-front .idcard-row7 {
+  margin-top: 5.5%;
+
+}
+
+.idcard-back {
+  height: 550rpx;
+  position: relative;
+}
+
+
+
+
+
+.zm-name {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+
+
+.card-f-up-left {
+  /* max-width: calc(100% - 200rpx); */
+  overflow: hidden;
+  position: relative;
+}
+
+.cardTx {
+  /* margin-left: 20rpx; */
+  position: absolute;
+  z-index: 10;
+  right: 147rpx;
+  top: 152rpx;
+}
+
+.cardTx image {
+  /* margin-left: 20rpx; height: 224rpx;*/
+  width: 136rpx;
+}
+
+.small-img {
+  width: 50rpx !important;
+  height: 65rpx !important;
+
+}
+
+.card-f-up-right image {
+  width: 200rpx;
+  height: 260rpx;
+}
+
+.card-contain .card-last {
+  display: flex;
+  height: 450rpx;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 40rpx;
+}
+
+.card-contain::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4rpx;
+  background-color: #eee;
+}
+
+.buttom {
+  /* height: 30%; */
+  padding: 40rpx;
+}
+
+.buttom .msg {
+  margin-top: 20rpx;
+}
+
+.buttom-c-up {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-li {
+  margin: 10rpx 0rpx;
+}
+
+
+.card11 {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+}
+
+.code {
+  width: 100rpx;
+  height: 100rpx;
+
+}
+
+text {
+  font-size: 28rpx;
+
+}
+
+.card-text {
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+}
+
+.card-text label {
+  font-weight: 600;
+  font-size: 28rpx;
+  width: 150rpx;
+  display: inline-block;
+  text-align-last: justify;
+  text-align: justify;
+  text-justify: distribute-all-lines;
+  min-width: 150rpx;
+
+}
+
+.card-text text {
+  margin-left: 35rpx;
+}
+
+
+.gotomap .van-button--primary {
+  background-color: #1989fa;
+}
+
+
+
+
+
+@import "../../common/css/main.wxss";
+
+page {
+  height: 100%;
+}
+
+.img-show {
+  width: 100%;
+  height: 650rpx;
+}
+
+.contain {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx 20rpx;
+}
+
+
+.content .title {
+  border-bottom: 4rpx #aaa solid;
+  text-align: center;
+  font-size: 40rpx;
+  padding: 10rpx 0;
+  font-weight: bolder;
+}
+
+.page-form {
+  margin-top: 200rpx;
+  height: 800rpx;
+  width: 100%;
+  vertical-align: center;
+  align-items: center;
+
+
+  align-items: center;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.form {
+  height: 100%;
+  width: 500rpx;
+  border: 1px solid #aaa;
+  vertical-align: center;
+  align-items: center;
+  /* justify-content: center; */
+
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.tag {
+  padding: 50rpx;
+  height: 700rpx;
+  width: 500rpx;
+}
+
+.txt {
+  text-align: center;
+  font-size: 40rpx;
+  padding-top: 150rpx;
+  font-weight: bolder;
+}
+
+.txt1 {
+  text-align: center;
+  font-size: 40rpx;
+  padding-top: 20rpx;
+  font-weight: bolder;
+}
+
+.txt2 {
+  text-align: center;
+  font-size: 40rpx;
+  padding-top: 20rpx;
+  font-weight: bolder;
+}
+
+.txt3 {
+  text-align: center;
+  font-size: 40rpx;
+  padding-top: 20rpx;
+  font-weight: bolder;
+}
+
+.txt4 {
+  text-align: center;
+  font-size: 40rpx;
+  padding-top: 20rpx;
+  font-weight: bolder;
+}
+
+.ui-subscript.ui-subscript-orange {
+  background-color: #FB5050;
+}
+
+.ui-subscript.ui-subscript-green {
+  background-color: green;
+}
+
+.ui-subscript {
+  margin-left: 340rpx;
+  margin-top: 700rpx;
+  position: absolute;
+  left: 225rpx;
+  top: 1;
+  z-index: 9;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 20px;
+  background-color: #FB5050;
+  white-space: nowrap;
+  color: #fff;
+  padding: 0px 50px;
+  -webkit-transform: rotate(-45deg) translate(-31%, -205%);
+  transform: rotate(-45deg) translate(-33%, -205%);
+}
+
+.next {
+  text-align: center;
+  padding: 20rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-view {
+  text-align: center;
+  margin-top: 100rpx;
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  width: 200rpx;
+}
+
+.btn-pad .van-button--primary {
+  padding: 0 120rpx;
+  background-color: #008CBA;
+  font-size: 16px;
+  border-radius: 8px;
+}

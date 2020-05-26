@@ -1,0 +1,26 @@
+{
+  "usingComponents": {
+    "van-button": "/common/module/weapp/dist/button/index",
+    "van-field": "/common/module/weapp/dist/field/index",
+    "van-checkbox": "/common/module/weapp/dist/checkbox/index",
+    "van-checkbox-group": "/common/module/weapp/dist/checkbox-group/index",
+    "van-radio": "/common/module/weapp/dist/radio/index",
+    "van-radio-group": "/common/module/weapp/dist/radio-group/index",
+    "van-picker": "/common/module/weapp/dist/picker/index",
+    "van-dropdown-menu": "/common/module/weapp/dist/dropdown-menu/index",
+    "van-dropdown-item": "/common/module/weapp/dist/dropdown-item/index",
+    "van-action-sheet": "/common/module/weapp/dist/action-sheet/index",
+    "van-popup": "/common/module/weapp/dist/popup/index",
+    "van-datetime-picker": "/common/module/weapp/dist/datetime-picker/index",
+    "van-image": "/common/module/weapp/dist/image/index",
+    "van-row": "/common/module/weapp/dist/row/index",
+    "van-col": "/common/module/weapp/dist/col/index",
+    "van-grid": "/common/module/weapp/dist/grid/index",
+    "van-grid-item": "/common/module/weapp/dist/grid-item/index"
+  },
+  "navigationBarBackgroundColor": "#eee",
+  "navigationBarTitleText": "上传证明材料",
+  "backgroundColor": "#eee",
+  "backgroundTextStyle": "light",
+  "navigationBarTextStyle": "black"
+}

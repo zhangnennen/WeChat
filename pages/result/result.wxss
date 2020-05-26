@@ -1,0 +1,147 @@
+@import "../../common/css/main.wxss";
+
+page {
+  height: 100%;
+}
+
+.img-show {
+  width: 100%;
+  height: 650rpx;
+}
+
+.contain {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx 20rpx;
+}
+
+
+.content .title {
+  border-bottom: 4rpx #aaa solid;
+  text-align: center;
+  font-size: 40rpx;
+  padding: 10rpx 0;
+  font-weight: bolder;
+}
+
+.page-form{
+  margin-top: 200rpx;
+  height: 800rpx;
+  width: 100%;
+  vertical-align:center;
+  align-items: center;
+
+
+  align-items: center;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.form{
+  height: 100%;
+  width: 500rpx;
+  border:1px solid #aaa;
+  vertical-align:center;
+  align-items: center;
+  /* justify-content: center; */
+
+  display: flex;
+  flex-direction: column;
+  background-color: #eee;
+}
+.tag{
+  padding: 50rpx;
+  height: 700rpx;
+  width: 500rpx;
+}
+.txt{
+  text-align: center;
+  font-size: 40rpx;
+  padding-top: 150rpx;
+  font-weight: bolder;
+}
+
+.txt1{
+  text-align: center;
+  font-size: 40rpx;
+  padding-top: 20rpx;
+  font-weight: bolder;
+}
+
+.txt2{
+  text-align: center;
+  font-size: 40rpx;
+  padding-top: 20rpx;
+  font-weight: bolder;
+}
+
+.txt3{
+  text-align: center;
+  font-size: 40rpx;
+  padding-top: 20rpx;
+  font-weight: bolder;
+}
+
+.txt4{
+  text-align: center;
+  font-size: 40rpx;
+  padding-top: 20rpx;
+  font-weight: bolder;
+}
+.ui-subscript.ui-subscript-orange {
+  background-color: #FB5050;
+}
+
+.ui-subscript.ui-subscript-green {
+  background-color:green;
+}
+
+.ui-subscript {
+  margin-left: 340rpx;
+  margin-top: 700rpx;
+  position: absolute;
+  left: 225rpx;
+  top: 1;
+  z-index: 9;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 20px;
+  background-color: #FB5050;
+  white-space: nowrap;
+  color: #fff;
+  padding: 0px 50px;
+  -webkit-transform: rotate(-45deg) translate(-31%, -205%);
+  transform: rotate(-45deg) translate(-33%, -205%);
+}
+
+.next {
+  text-align: center;
+  padding: 20rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-view{
+  text-align: center;
+  margin-top: 100rpx;
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn{
+  width: 200rpx;
+}
+
+.btn-pad .van-button--primary {
+  padding: 0 120rpx;
+  background-color: #008CBA;
+  font-size: 16px;
+  border-radius: 8px;
+}

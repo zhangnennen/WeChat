@@ -1,0 +1,24 @@
+<!--pages/apply/apply.wxml-->
+<view class="contain">
+	<view class="content">
+		<view class="title"> 身份证拍照</view>
+		<view class="pic">
+			<view class="pic-t">
+				<image bindtap="upLoadIdCardFront"  mode="aspectFit" src="{{ imgFrontUrl ? imgFrontUrl :  '/common/img/1.png'}}"></image>
+			</view>
+
+			<view class="pic-t">
+				<image bindtap="upLoadIdCardBack"  mode="aspectFit" src="{{ imgBackUrl ? imgBackUrl:'/common/img/2.png'}}"></image>
+			</view>
+			<view>
+
+			</view>
+		</view>
+
+	</view>
+	<view class="next">
+		<van-button  type="primary"  bindtap="gotonext" class="btn-pad">身份验证</van-button>
+	</view>
+
+</view>
+<i-toast id="toast" />

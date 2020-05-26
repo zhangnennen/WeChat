@@ -1,0 +1,120 @@
+.i-card {
+  margin: 0 10px;
+  font-size: 14px;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  border: 1rpx solid #dddee1;
+  border-radius: 15rpx;
+  margin-bottom: 20rpx;
+
+}
+
+.i-card-full {
+  margin: 0;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+
+.i-card-header {
+  height: 80rpx;
+  display: flex;
+  padding: 6px 16px;
+  align-items: center;
+}
+
+.i-card-header-content {
+  font-size: 30rpx;
+  font-weight: bold;
+
+  flex: 1;
+  text-align: left;
+}
+
+.i-card-header-thumb {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  background-size: cover;
+  vertical-align: middle;
+}
+
+.i-card-header-title {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #1c2438;
+}
+
+.i-card-header-extra0 {
+
+
+  font-size: 14px;
+  color: white;
+  background-color: red;
+  text-align: center;
+  border-radius: 20rpx;
+  width: 100rpx;
+
+}
+
+.i-card-header-extra1 {
+
+
+  font-size: 14px;
+  color: white;
+  background-color: green;
+  border-radius: 20rpx;
+  text-align: center;
+  width: 100rpx;
+
+}
+
+.i-card-header-extra2 {
+
+
+  font-size: 14px;
+  color: white;
+  background-color: yellowgreen;
+  border-radius: 20rpx;
+  text-align: center;
+  width: 100rpx;
+
+}
+
+.i-card-body {
+  position: relative;
+  padding: 6px 16px;
+  color: #495060;
+  font-size: 14px;
+  min-height: 120rpx;
+  max-height: 350rpx;
+  overflow-y: scroll;
+}
+
+.i-card-body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 0 solid #e9eaec;
+  border-top-width: 1px;
+}
+
+.i-card-footer {
+  position: relative;
+  padding: 6px 16px;
+  color: #80848f;
+  font-size: 12px;
+}

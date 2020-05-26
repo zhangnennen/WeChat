@@ -1,0 +1,13 @@
+<view class="i-class i-card {{ full ? 'i-card-full' : '' }}">
+    <view class="i-class i-card-header">
+        <view class="i-card-header-content">
+            <image class="i-card-header-thumb" src="{{ thumb }}" mode="aspectFit" wx:if="{{ thumb }}" />
+            {{ title }}
+        </view>
+        <view class="i-card-header-extra0" wx:if="{{ extra=='未上传' }}">{{ extra }}</view>
+        <view class="i-card-header-extra1" wx:if="{{ extra=='已上传' }}">{{extra }}</view>
+        <view class="i-card-header-extra2" wx:if="{{ extra=='待上传' }}">{{extra }}</view>
+    </view>
+    <view class="i-class i-card-body"><slot name="content"></slot></view>
+    <view class="i-class i-card-footer"><slot name="footer"></slot></view>
+</view>

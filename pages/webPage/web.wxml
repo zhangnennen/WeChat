@@ -1,0 +1,2 @@
+<!--pages/webPage/web.wxml-->
+<web-view src="https://wlj.wulanchabu.gov.cn/reg.html"></web-view>

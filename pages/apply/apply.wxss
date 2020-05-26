@@ -1,0 +1,60 @@
+/* pages/apply/apply.wxss */
+
+@import "../../common/css/main.wxss";
+
+page {
+  height: 100%;
+}
+
+.contain {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  height: 80%;
+  border: 4rpx #aaa solid;
+  padding: 10rpx 20rpx;
+}
+
+.content .title {
+  border-bottom: 4rpx #aaa solid;
+  text-align: center;
+  font-size: 60rpx;
+  padding: 10rpx 0;
+}
+
+.pic {
+  text-align: center;
+}
+
+.pic-t {
+  margin-top: 10rpx;
+}
+
+.pic-t image {
+  height: 450rpx;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 100rpx;
+}
+
+.zm-img {
+max-width: 100%;max-height: 100%;width:auto;height:auto;position: absolute;left: 50%;top: 50%;transform: translate3d(-50%,-50%,0);-webkit-transform: translate3d(-50%,-50%,0);
+}
+
+.next {
+  text-align: center;
+  height: 16%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-pad .van-button--primary {
+  padding: 0 120rpx;
+  background-color: #008CBA;
+  font-size: 16px;
+  border-radius: 8px;
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": { 
+     "van-tag": "/common/module/weapp/dist/tag/index",
+     "van-button": "/common/module/weapp/dist/button/index"
+  },
+  "navigationBarTitleText": "居民证申请结果"
+}

@@ -1,0 +1,49 @@
+<view class="contain">
+	<view class="content">
+		<view class="title">{{title}}</view>
+
+		<view class="page-form">
+
+
+			<view class="form">
+				<view a:if="{{true}}" class="ui-subscript {{status == 6 ? 'ui-subscript-green' : 'ui-subscript-orange'}}">{{statusStr}}</view>
+				<text class="txt">{{resultTitle}}</text>
+
+				<text class="txt1">{{resultStr1}}</text>
+
+				<text class="txt2">{{resultStr2}}</text>
+
+				<text class="txt3">{{resultStr3}}</text>
+
+				<text class="txt4">{{resultStr4}}</text>
+
+			</view>
+
+		</view>
+
+		<view class="btn-view">
+
+			<block wx:if="{{status == 1 || status == 2 || status == 3}}">
+				<van-button size="normal" round type="primary" bind:click="gotoPage" class="btn-pad" block>返回首页</van-button>
+			</block>
+
+			
+			<block wx:if="{{status == 5}}">
+				<van-button size="normal" round type="primary" bind:click="gotoPage" class="btn-pad" block>前往修改</van-button>
+			</block>
+
+			<block wx:if="{{status == 6}}">
+				<van-button size="normal"  round type="primary" class="btn-pad" bind:click="gotoPage" block>下一步</van-button>
+			</block>
+			<block wx:if="{{status == 4}}">
+				<van-button size="normal" round type="primary" bind:click="gotoPage" class="btn-pad" block>返回首页</van-button>
+			</block>
+
+		</view>
+	</view>
+
+
+
+	
+</view>
+<i-toast id="toast" />

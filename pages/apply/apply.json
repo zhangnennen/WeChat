@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-button": "/common/module/weapp/dist/button/index"
+
+  },
+  "navigationBarBackgroundColor": "#eee",
+  "navigationBarTitleText": "居民证身份证上传",
+  "backgroundColor": "#eee",
+  "backgroundTextStyle": "light",
+  "navigationBarTextStyle": "black"
+}
